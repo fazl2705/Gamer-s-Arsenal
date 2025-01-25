@@ -1,0 +1,881 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+.social-icons a img {
+    width:40px;
+    margin-left: 10px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+}
+
+.hero-description {
+    margin-left: 20px;
+    animation: slideIn 1s ease;
+}
+
+.hero-description h2 {
+    margin-bottom: 10px;
+}
+
+.featured {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.featured-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.featured-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Description section styles */
+.description {
+    padding: 50px 0;
+    align-items: center;
+}
+
+/* Locations section styles */
+.locations {
+    text-align: center;
+    padding: 40px 0;
+    color: #ddd;
+}
+
+.location-item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+}
+
+.location-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.location-item:hover .location-image {
+    transform: scale(1.1);
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Branch info section styles */
+.branch-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.branch-info th,
+.branch-info td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    color: #ddd;
+}
+
+table.branch-table tfoot td {
+    font-size: 14px;
+    font-style: italic;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    color: #555;
+}
+
+table.branch-table tfoot td.table-footer {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Animation styles */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Peripherals section styles*/
+.peripherals {
+    align-items: center;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.peripherals h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Product Styling */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover animation: Scale and shadow effect */
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarge the product box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+}
+
+/* Product Image Styling */
+.product-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Display price when hovering */
+.product .price {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Show price when hovering over the product */
+.product:hover .price {
+    opacity: 1;
+}
+
+/* Add hover effect for product text */
+.product:hover p:first-child {
+    color: #f44e42; /* Change product name color on hover */
+}
+
+/* Product text */
+.product p {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Consoles section styles */
+.consoles {
+    padding: 50px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 20px; /* Space between products */
+}
+
+.product {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #000000;
+    margin-bottom: 20px;
+    animation: fade-in 2s ease-in-out;
+}
+
+
+/* Animation styles */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Games section styles */
+.games {
+    padding: 50px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 20px; /* Space between products */
+}
+
+.product {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    background-color: #eee;
+    margin-bottom: 20%;
+    animation: fade-in 2s ease-in-out;
+}
+
+
+/* Animation styles */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Product grid section */
+section.consoles {
+    padding: 20px;
+    text-align: center;
+}
+
+section.consoles h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Grid container */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Individual product styling */
+.product {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.product p {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #000000;
+}
+
+.product .price {
+    color: #27ae60;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Queries & FAQ section styles */
+.queries-faq {
+    padding: 50px 0;
+    
+}
+
+.queries-faq input[type="text"],
+.queries-faq textarea {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+.description{color: #ddd;}
+
+.queries-faq{color: #ddd;}
+
+/* Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.hero-description {
+    margin-left: 20px;
+}
+
+.hero-description h2 {
+    margin-bottom: 10px;
+}
+
+.hero-description ul li {
+    margin-bottom: 5px;
+}
+
+.grid-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    max-width: 100%;
+    display: block;
+}
+
+.grid-item .release-date {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.grid-item:hover .release-date {
+    opacity: 1;
+}
+
+.grid-item p {
+    padding: 10px;
+    background: #f9f9f9;
+    font-size: 14px;
+}
+
+
+
+/* Video Section */
+.video-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 960px;  /* Limiting maximum width */
+    height: auto;
+}
+
+.description{text-align: center;}
+
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/BG GROUND.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .social-icons a img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/BG GROUND.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .social-icons a img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* Queries & FAQ Section */
+.queries-faq {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.queries-faq h2, 
+.queries-faq h3, 
+.queries-faq h4 {
+    text-align: center;
+    color: #333;
+}
+
+.queries-faq ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.queries-faq ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Form Styling */
+form div {
+    margin: 15px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black; /* Set the label text color to black */
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+form label {
+    color: black; /* Set the label text color to black */
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .queries-faq ul, .OG form {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .queries-faq ul li, form label {
+        font-size: 0.9em;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-description h2 {
+        font-size: 1.5em;
+    }
+
+    .featured {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .featured-item {
+        flex: 1 1 100%;
+    }
+
+    .hero-description ul li, 
+    .featured-item p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .hero-description h2 {
+        font-size: 1.2em;
+    }
+
+    .featured-item h3 {
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .description, .locations, .branch-info {
+        padding: 10px;
+    }
+
+    .location-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .branch-info table {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.5em;
+    }
+
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .branch-info th, .branch-info td {
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
